@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/view/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build src/view/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "@types/uikit": "^3.14.0"
+  }
+}
