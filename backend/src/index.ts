@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 
-import {  postKontakts } from "./controller/kontakts";
+import {  deleteKontakts, postKontakts } from "./controller/kontakts";
 
 const app = express();
 const port = 4000;
@@ -20,9 +20,10 @@ app.use(express.json());
  * Routes.
  *
  */
-app.post("/Kontakts", postKontakts);
+app.post("/kontakts", postKontakts);
+app.delete("/kontakts", deleteKontakts);
 
-// app.delete("/session", deleteSession);
+
 
 // app.get("/sessions/check", checkValidSession);
 
