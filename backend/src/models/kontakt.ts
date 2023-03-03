@@ -78,4 +78,11 @@ export class Kontakt {
     const result = await pgClient.query(`DELETE FROM db_adr WHERE name = $1 and vorname1 = $2`, [this.name, this.vorname1]);
 
   }
+  public async  getKontakt(): Promise<Kontakt> {
+    const res = await pgClient.query("SELECT * FROM db_adr WHERE name = $1 and vorname1 = $2", [this.name, this.vorname1]);
+    return res.rows.find(g => new Kontakt(g))
+  }
+
 }
+
+

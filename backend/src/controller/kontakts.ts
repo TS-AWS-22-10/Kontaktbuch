@@ -12,3 +12,8 @@ export async function deleteKontakts(request, response) {
   await kontakt.delete();
   response.status(201).send("Löschen Erledigt!");
 }
+export async function findKontakts(request, response) {
+  const kontakt = new Kontakt(request.body);
+  response.body= await kontakt.getKontakt();
+  response.status(201).send(response.body);
+}

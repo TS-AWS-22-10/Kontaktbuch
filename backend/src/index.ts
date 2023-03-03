@@ -1,7 +1,7 @@
 const express = require('express') // import express from "express";
 const cors = require('cors');
 
-import {  deleteKontakts, postKontakts } from "./controller/kontakts";
+import {  deleteKontakts, findKontakts, postKontakts } from "./controller/kontakts";
 
 const app = express();
 const port = 4000;
@@ -22,6 +22,7 @@ app.use(express.json());
  */
 app.post("/kontakts", postKontakts);
 app.delete("/kontakts", deleteKontakts);
+app.get("/kontakts", findKontakts);
 
 
 
